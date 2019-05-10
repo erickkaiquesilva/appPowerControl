@@ -9,13 +9,15 @@
 import UIKit
 class ListProductsTableViewController: UITableViewController {
     
+    var label = UILabel()
     var storageProduct = ListProductRegisterModel()
     var product: [Product] = []
     var customCell: ProductTableViewCellDelegate?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        label.text = "OPS!!! Nao existe produtos cadastrados."
+        label.textAlignment = .center
         tableView.register(ProductTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.separatorStyle = .none
         setupLoadProduct()
@@ -26,7 +28,9 @@ class ListProductsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return product.count
+        let count = product.count
+        tableView.backgroundView = count == 0 ? label : nil
+        return count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -37,6 +41,25 @@ class ListProductsTableViewController: UITableViewController {
         let item = product[indexPath.row]
         cell.customProductCell(product: item)
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            let row = indexPath.row
+            storageProduct.deleteProduct(row: row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        product[row].isSelected.toggle()
+        if product[row].isSelected == true{
+            let itemFavorite = product[row]
+            print(itemFavorite)
+        }else{
+            print("False")
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -35,6 +35,7 @@
 		F46953482285EAE5003E6CD3 /* ListProductsRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46953472285EAE5003E6CD3 /* ListProductsRegisterModel.swift */; };
 		F469534B2285FE08003E6CD3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469534A2285FE08003E6CD3 /* ProductTableViewCell.swift */; };
 		F469534E2285FE83003E6CD3 /* ProtocolsListProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469534D2285FE83003E6CD3 /* ProtocolsListProducts.swift */; };
+		F469535022861D1F003E6CD3 /* ListProductFavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469534F22861D1F003E6CD3 /* ListProductFavoritesModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		F46953472285EAE5003E6CD3 /* ListProductsRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsRegisterModel.swift; sourceTree = "<group>"; };
 		F469534A2285FE08003E6CD3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		F469534D2285FE83003E6CD3 /* ProtocolsListProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsListProducts.swift; sourceTree = "<group>"; };
+		F469534F22861D1F003E6CD3 /* ListProductFavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductFavoritesModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				F46953412285D2A1003E6CD3 /* CoreDataProductManager.swift */,
+				F469534F22861D1F003E6CD3 /* ListProductFavoritesModel.swift */,
 				F46953452285E0B1003E6CD3 /* RegisterModel.swift */,
 				F46953472285EAE5003E6CD3 /* ListProductsRegisterModel.swift */,
 			);
@@ -355,6 +358,7 @@
 				F44BCAEB2284673D00B3BF62 /* Coordinator.swift in Sources */,
 				F46953442285D2DB003E6CD3 /* CoreData+UIView.swift in Sources */,
 				F469533B2284A705003E6CD3 /* FavoriteTableViewCoordinator.swift in Sources */,
+				F469535022861D1F003E6CD3 /* ListProductFavoritesModel.swift in Sources */,
 				F469533022849D6F003E6CD3 /* TabBarCoordinator.swift in Sources */,
 				F44BCB0322847FE200B3BF62 /* ComponentsSignUpView.swift in Sources */,
 				F46953392284A6C0003E6CD3 /* FavoriteTableViewController.swift in Sources */,

@@ -11,3 +11,6 @@ import Foundation
 protocol ProductTableViewCellDelegate {
     func customProductCell(product: Product)
 }
+protocol ProtocolDeleteProduct {
+    func deleteProduct(index: Int)
+}
