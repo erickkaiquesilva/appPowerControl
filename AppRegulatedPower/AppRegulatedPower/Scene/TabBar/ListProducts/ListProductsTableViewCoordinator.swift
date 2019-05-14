@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 class ListProductsTableViewCoordinator: Coordinator {
     var navigationController: UINavigationController?
     

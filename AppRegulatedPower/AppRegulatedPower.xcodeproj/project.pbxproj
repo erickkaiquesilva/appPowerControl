@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDFD72284FF16EC897703956 /* Pods_AppRegulatedPower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2066447000CE590C6DD90987 /* Pods_AppRegulatedPower.framework */; };
+		F404C6DC228B3A1300149F41 /* ListProductsFavorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F404C6DB228B3A1300149F41 /* ListProductsFavorite.swift */; };
 		F44BCAD1228464D400B3BF62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BCAD0228464D400B3BF62 /* AppDelegate.swift */; };
 		F44BCAD3228464D400B3BF62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44BCAD2228464D400B3BF62 /* ViewController.swift */; };
 		F44BCAD9228464D400B3BF62 /* AppRegulatedPower.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F44BCAD7228464D400B3BF62 /* AppRegulatedPower.xcdatamodeld */; };
@@ -35,10 +37,14 @@
 		F46953482285EAE5003E6CD3 /* ListProductsRegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46953472285EAE5003E6CD3 /* ListProductsRegisterModel.swift */; };
 		F469534B2285FE08003E6CD3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469534A2285FE08003E6CD3 /* ProductTableViewCell.swift */; };
 		F469534E2285FE83003E6CD3 /* ProtocolsListProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469534D2285FE83003E6CD3 /* ProtocolsListProducts.swift */; };
-		F469535022861D1F003E6CD3 /* ListProductFavoritesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469534F22861D1F003E6CD3 /* ListProductFavoritesModel.swift */; };
+		F46953562289B678003E6CD3 /* FavoriteComparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46953552289B678003E6CD3 /* FavoriteComparator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0BCA809E3E8FC324BAFFFDC9 /* Pods-AppRegulatedPower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRegulatedPower.debug.xcconfig"; path = "Target Support Files/Pods-AppRegulatedPower/Pods-AppRegulatedPower.debug.xcconfig"; sourceTree = "<group>"; };
+		2066447000CE590C6DD90987 /* Pods_AppRegulatedPower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppRegulatedPower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD55564A78B52B49C1776188 /* Pods-AppRegulatedPower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppRegulatedPower.release.xcconfig"; path = "Target Support Files/Pods-AppRegulatedPower/Pods-AppRegulatedPower.release.xcconfig"; sourceTree = "<group>"; };
+		F404C6DB228B3A1300149F41 /* ListProductsFavorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsFavorite.swift; sourceTree = "<group>"; };
 		F44BCACD228464D400B3BF62 /* AppRegulatedPower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppRegulatedPower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44BCAD0228464D400B3BF62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44BCAD2228464D400B3BF62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,7 +75,7 @@
 		F46953472285EAE5003E6CD3 /* ListProductsRegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductsRegisterModel.swift; sourceTree = "<group>"; };
 		F469534A2285FE08003E6CD3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		F469534D2285FE83003E6CD3 /* ProtocolsListProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolsListProducts.swift; sourceTree = "<group>"; };
-		F469534F22861D1F003E6CD3 /* ListProductFavoritesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductFavoritesModel.swift; sourceTree = "<group>"; };
+		F46953552289B678003E6CD3 /* FavoriteComparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteComparator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +83,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDFD72284FF16EC897703956 /* Pods_AppRegulatedPower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		318643C47D8C549023A6C066 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2066447000CE590C6DD90987 /* Pods_AppRegulatedPower.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4FF635E8C112F7496F06CE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0BCA809E3E8FC324BAFFFDC9 /* Pods-AppRegulatedPower.debug.xcconfig */,
+				CD55564A78B52B49C1776188 /* Pods-AppRegulatedPower.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F44BCAC4228464D400B3BF62 = {
 			isa = PBXGroup;
 			children = (
 				F44BCACF228464D400B3BF62 /* AppRegulatedPower */,
 				F44BCACE228464D400B3BF62 /* Products */,
+				E4FF635E8C112F7496F06CE3 /* Pods */,
+				318643C47D8C549023A6C066 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +249,8 @@
 		F46953372284A69D003E6CD3 /* FavoriteProducts */ = {
 			isa = PBXGroup;
 			children = (
+				F46953522289B594003E6CD3 /* Delegate */,
+				F46953512289B58A003E6CD3 /* Cell */,
 				F46953382284A6C0003E6CD3 /* FavoriteTableViewController.swift */,
 				F469533A2284A705003E6CD3 /* FavoriteTableViewCoordinator.swift */,
 			);
@@ -249,9 +277,10 @@
 			isa = PBXGroup;
 			children = (
 				F46953412285D2A1003E6CD3 /* CoreDataProductManager.swift */,
-				F469534F22861D1F003E6CD3 /* ListProductFavoritesModel.swift */,
 				F46953452285E0B1003E6CD3 /* RegisterModel.swift */,
 				F46953472285EAE5003E6CD3 /* ListProductsRegisterModel.swift */,
+				F404C6DB228B3A1300149F41 /* ListProductsFavorite.swift */,
+				F46953552289B678003E6CD3 /* FavoriteComparator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -272,6 +301,20 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
+		F46953512289B58A003E6CD3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F46953522289B594003E6CD3 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F44BCAE2228464DA00B3BF62 /* Build configuration list for PBXNativeTarget "AppRegulatedPower" */;
 			buildPhases = (
+				1D85CDF71F5E31E5CF1F8773 /* [CP] Check Pods Manifest.lock */,
 				F44BCAC9228464D400B3BF62 /* Sources */,
 				F44BCACA228464D400B3BF62 /* Frameworks */,
 				F44BCACB228464D400B3BF62 /* Resources */,
+				F404C6DA228B314200149F41 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -337,6 +382,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D85CDF71F5E31E5CF1F8773 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AppRegulatedPower-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F404C6DA228B314200149F41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F44BCAC9228464D400B3BF62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -351,14 +438,15 @@
 				F469533E2284AD9A003E6CD3 /* SignUpProtocols.swift in Sources */,
 				F44BCAF822846E5600B3BF62 /* InitialDelegate.swift in Sources */,
 				F44BCAEE2284680F00B3BF62 /* InitialCoordinator.swift in Sources */,
+				F46953562289B678003E6CD3 /* FavoriteComparator.swift in Sources */,
 				F46953422285D2A1003E6CD3 /* CoreDataProductManager.swift in Sources */,
 				F44BCAD3228464D400B3BF62 /* ViewController.swift in Sources */,
 				F44BCB0122847FCF00B3BF62 /* SignUpViewController.swift in Sources */,
+				F404C6DC228B3A1300149F41 /* ListProductsFavorite.swift in Sources */,
 				F469534B2285FE08003E6CD3 /* ProductTableViewCell.swift in Sources */,
 				F44BCAEB2284673D00B3BF62 /* Coordinator.swift in Sources */,
 				F46953442285D2DB003E6CD3 /* CoreData+UIView.swift in Sources */,
 				F469533B2284A705003E6CD3 /* FavoriteTableViewCoordinator.swift in Sources */,
-				F469535022861D1F003E6CD3 /* ListProductFavoritesModel.swift in Sources */,
 				F469533022849D6F003E6CD3 /* TabBarCoordinator.swift in Sources */,
 				F44BCB0322847FE200B3BF62 /* ComponentsSignUpView.swift in Sources */,
 				F46953392284A6C0003E6CD3 /* FavoriteTableViewController.swift in Sources */,
@@ -504,6 +592,7 @@
 		};
 		F44BCAE3228464DA00B3BF62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BCA809E3E8FC324BAFFFDC9 /* Pods-AppRegulatedPower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +612,7 @@
 		};
 		F44BCAE4228464DA00B3BF62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD55564A78B52B49C1776188 /* Pods-AppRegulatedPower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

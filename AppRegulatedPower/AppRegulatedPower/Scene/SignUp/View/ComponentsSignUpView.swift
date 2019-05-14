@@ -71,15 +71,36 @@ class ComponentsSignUpView: UIView, UITextFieldDelegate {
         titleFull.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 50, left: 16, bottom: 16, right: 0))
         
         textFieldNameProduct.translatesAutoresizingMaskIntoConstraints = false
-        textFieldNameProduct.anchor(top: self.titleFull.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 70, left: 16, bottom: 0, right: 16))
-        textFieldNameProduct.heightAnchor.constraint(equalToConstant: 70).isActive = true
+        textFieldNameProduct.anchor(top: self.titleFull.bottomAnchor,
+                                    leading: self.leadingAnchor,
+                                    bottom: nil,
+                                    trailing: self.trailingAnchor,
+                                    padding: UIEdgeInsets(top: 70,
+                                                          left: 16,
+                                                          bottom: 0,
+                                                          right: 16))
         
+        textFieldNameProduct.heightAnchor.constraint(equalToConstant: 70).isActive = true
         textFieldValueProduct.translatesAutoresizingMaskIntoConstraints = false
-        textFieldValueProduct.anchor(top: self.textFieldNameProduct.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 40, left: 16, bottom: 0, right: 16))
+        textFieldValueProduct.anchor(top: self.textFieldNameProduct.bottomAnchor,
+                                     leading: self.leadingAnchor,
+                                     bottom: nil,
+                                     trailing: self.trailingAnchor,
+                                     padding: UIEdgeInsets(top: 40,
+                                                           left: 16,
+                                                           bottom: 0,
+                                                           right: 16))
         textFieldValueProduct.heightAnchor.constraint(equalToConstant: 70).isActive = true
         
         btnCreateNewProduct.translatesAutoresizingMaskIntoConstraints = false
-        btnCreateNewProduct.anchor(top: self.textFieldValueProduct.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 40, left: 16, bottom: 0, right: 16))
+        btnCreateNewProduct.anchor(top: self.textFieldValueProduct.bottomAnchor,
+                                   leading: self.leadingAnchor,
+                                   bottom: nil,
+                                   trailing: self.trailingAnchor,
+                                   padding: UIEdgeInsets(top: 40,
+                                                         left: 16,
+                                                         bottom: 0,
+                                                         right: 16))
         btnCreateNewProduct.heightAnchor.constraint(equalToConstant: 65).isActive = true
     }
     

@@ -18,7 +18,9 @@ class ComponentsInitialView: UIView {
     let btnCreateNewProducts: UIButton = {
         let btn = UIButton()
         btn.layer.cornerRadius = 10
-        btn.backgroundColor =  #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        btn.layer.borderWidth = 2
+        btn.layer.borderColor = #colorLiteral(red: 0.2112424614, green: 0.445049266, blue: 0.7647058964, alpha: 1)
+        btn.setTitleColor(#colorLiteral(red: 0.2112424614, green: 0.445049266, blue: 0.7647058964, alpha: 1), for: .normal)
         btn.setTitle("Cadastrar Produto", for: .normal)
         return btn
     }()
@@ -52,13 +54,33 @@ class ComponentsInitialView: UIView {
     func constrainsBtnCreateNewProduct(){
         btnCreateNewProducts.translatesAutoresizingMaskIntoConstraints = false
         
-        let horizontalBtn = NSLayoutConstraint(item: btnCreateNewProducts, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        let horizontalBtn = NSLayoutConstraint(item: btnCreateNewProducts,
+                                               attribute: NSLayoutConstraint.Attribute.centerX,
+                                               relatedBy: NSLayoutConstraint.Relation.equal,
+                                               toItem: self,
+                                               attribute: NSLayoutConstraint.Attribute.centerX,
+                                               multiplier: 1, constant: 0)
         
-        let verticalBtn = NSLayoutConstraint(item: btnCreateNewProducts, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        let verticalBtn = NSLayoutConstraint(item: btnCreateNewProducts,
+                                             attribute: NSLayoutConstraint.Attribute.centerY,
+                                             relatedBy: NSLayoutConstraint.Relation.equal,
+                                             toItem: self,
+                                             attribute: NSLayoutConstraint.Attribute.centerY,
+                                             multiplier: 1, constant: 0)
         
-        let widthBtn = NSLayoutConstraint(item: btnCreateNewProducts, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250)
+        let widthBtn = NSLayoutConstraint(item: btnCreateNewProducts,
+                                          attribute: NSLayoutConstraint.Attribute.width,
+                                          relatedBy: NSLayoutConstraint.Relation.equal,
+                                          toItem: nil,
+                                          attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+                                          multiplier: 1, constant: 250)
         
-        let heightBtn = NSLayoutConstraint(item: btnCreateNewProducts, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 50)
+        let heightBtn = NSLayoutConstraint(item: btnCreateNewProducts,
+                                           attribute: NSLayoutConstraint.Attribute.height,
+                                           relatedBy: NSLayoutConstraint.Relation.equal,
+                                           toItem: nil,
+                                           attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+                                           multiplier: 1, constant: 70)
         
         NSLayoutConstraint.activate([horizontalBtn, verticalBtn, widthBtn, heightBtn])
     }
@@ -66,23 +88,42 @@ class ComponentsInitialView: UIView {
     func constrainsBtnListProducts(){
         btnListProducts.translatesAutoresizingMaskIntoConstraints = false
         
-        let horizontalBtn = NSLayoutConstraint(item: btnListProducts, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        let horizontalBtn = NSLayoutConstraint(item: btnListProducts,
+                                               attribute: NSLayoutConstraint.Attribute.centerX,
+                                               relatedBy: NSLayoutConstraint.Relation.equal,
+                                               toItem: self,
+                                               attribute: NSLayoutConstraint.Attribute.centerX,
+                                               multiplier: 1, constant: 0)
         
-        let verticalBtn = NSLayoutConstraint(item: btnListProducts, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 100)
+        let verticalBtn = NSLayoutConstraint(item: btnListProducts,
+                                             attribute: NSLayoutConstraint.Attribute.centerY,
+                                             relatedBy: NSLayoutConstraint.Relation.equal,
+                                             toItem: self,
+                                             attribute: NSLayoutConstraint.Attribute.centerY,
+                                             multiplier: 1, constant: 100)
         
-        let widthBtn = NSLayoutConstraint(item: btnListProducts, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250)
+        let widthBtn = NSLayoutConstraint(item: btnListProducts,
+                                          attribute: NSLayoutConstraint.Attribute.width,
+                                          relatedBy: NSLayoutConstraint.Relation.equal,
+                                          toItem: nil,
+                                          attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+                                          multiplier: 1, constant: 250)
         
-        let heightBtn = NSLayoutConstraint(item: btnListProducts, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 50)
-        
+        let heightBtn = NSLayoutConstraint(item: btnListProducts,
+                                           attribute: NSLayoutConstraint.Attribute.height,
+                                           relatedBy: NSLayoutConstraint.Relation.equal,
+                                           toItem: nil,
+                                           attribute: NSLayoutConstraint.Attribute.notAnAttribute,
+                                           multiplier: 1, constant: 70)
         NSLayoutConstraint.activate([horizontalBtn, verticalBtn, widthBtn, heightBtn])
     }
     
-    func addAction(){
+    func addAction() {
         btnCreateNewProducts.addTarget(self, action: #selector(nextSignUp), for: .touchUpInside)
         btnListProducts.addTarget(self, action: #selector(nextListProduct), for: .touchUpInside)
     }
     
-    @objc func nextSignUp(){
+    @objc func nextSignUp() {
        btnSignUpAction?()
     }
     

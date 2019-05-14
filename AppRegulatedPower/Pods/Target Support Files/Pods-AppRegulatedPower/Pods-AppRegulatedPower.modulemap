@@ -1,0 +1,6 @@
+framework module Pods_AppRegulatedPower {
+  umbrella header "Pods-AppRegulatedPower-umbrella.h"
+
+  export *
+  module * { export * }
+}

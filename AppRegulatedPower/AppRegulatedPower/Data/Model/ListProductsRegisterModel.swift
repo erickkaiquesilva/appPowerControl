@@ -6,6 +6,8 @@
 //  Copyright © 2019 Erick Kaique da Silva. All rights reserved.
 //
 import Foundation
+import UIKit
+import CoreData
 
 class ListProductRegisterModel{
     
@@ -18,14 +20,7 @@ class ListProductRegisterModel{
         return product
     }
     
-    func deleteProduct(row: Int){
-        let productDeleted = product[row]
-        context.delete(productDeleted)
-        do {
-            try context.save()
-            product.remove(at: row)
-        } catch {
-            print(error.localizedDescription)
-        }
+    func deleteProduct(row: Int, tableView: UITableView, indexPath: IndexPath){
+        
     }
 }

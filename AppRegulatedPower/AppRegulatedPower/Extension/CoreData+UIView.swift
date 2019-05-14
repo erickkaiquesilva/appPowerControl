@@ -8,23 +8,38 @@
 
 import UIKit
 import CoreData
-extension UITableViewController{
+extension UITableViewController {
     var context: NSManagedObjectContext{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
+        }
         return appDelegate.persistentContainer.viewContext
     }
 }
 
 extension RegisterModel{
-    var context: NSManagedObjectContext{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var context: NSManagedObjectContext {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
+        }
         return appDelegate.persistentContainer.viewContext
     }
 }
 
-extension ListProductRegisterModel{
-    var context: NSManagedObjectContext{
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+extension ListProductRegisterModel {
+    var context: NSManagedObjectContext {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
+        }
+        return appDelegate.persistentContainer.viewContext
+    }
+}
+
+extension FavoriteComparator {
+    var context: NSManagedObjectContext {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext.init(concurrencyType: .mainQueueConcurrencyType)
+        }
         return appDelegate.persistentContainer.viewContext
     }
 }

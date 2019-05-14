@@ -22,6 +22,21 @@ class CoreDataProductManager{
         }
     }
     
+    func getProductChecked(with id: Int64, context: NSManagedObjectContext) -> Product{
+        var productGet = Product()
+        do {
+            let fetchRequest : NSFetchRequest<Product> = Product.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "idProduct == %d", id)
+            let fetchedResults = try context.fetch(fetchRequest)
+            if let product = fetchedResults.first {
+                productGet = product
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        return productGet
+    }
+    
     func deleteProduct(index: Int, context: NSManagedObjectContext){
         let product = products[index]
         context.delete(product)
@@ -31,6 +46,8 @@ class CoreDataProductManager{
             print(error.localizedDescription)
         }
     }
+    
+    
     
     private init(){
         

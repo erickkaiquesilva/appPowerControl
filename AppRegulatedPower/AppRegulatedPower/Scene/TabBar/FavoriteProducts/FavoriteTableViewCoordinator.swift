@@ -15,7 +15,7 @@ class FavoriteTableViewCoordinator: Coordinator {
     }
     
     func start(with navigationType: NavigationType) {
-        
+        let favoriteTableView = FavoriteTableViewController()
     }
     
     func start() -> UIViewController {

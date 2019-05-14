@@ -55,7 +55,14 @@ class ProductTableViewCell: UITableViewCell {
         
         labelNameProduct.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 16))
         
-        labelValueProduct.anchor(top: self.labelNameProduct.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: UIEdgeInsets(top: 10, left: 20, bottom: 0, right: 16))
+        labelValueProduct.anchor(top: self.labelNameProduct.bottomAnchor,
+                                 leading: self.leadingAnchor,
+                                 bottom: nil,
+                                 trailing: self.trailingAnchor,
+                                 padding: UIEdgeInsets(top: 10,
+                                                       left: 20,
+                                                       bottom: 0,
+                                                       right: 16))
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum NavigationType{
+enum NavigationType {
     case push
     case present
 }
